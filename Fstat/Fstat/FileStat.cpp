@@ -10,8 +10,8 @@ FileStat::FileStat(std::string* filename) {
 	filePath = *filename;
 	fileContent = ReadAllFile();
 	numberOfChars = getNumberOfChars();
-	numberOfSpaces = std::count(std::begin(fileContent), std::end(fileContent), (char) " ");
-	numberOfLines = 0 ;
+	numberOfSpaces = std::count(std::begin(fileContent), std::end(fileContent), ' ');
+	numberOfLines = std::count(std::begin(fileContent), std::end(fileContent), '\n');
 }
 
 FileStat::~FileStat() { // Be sure to free every exploited memory region
@@ -40,13 +40,6 @@ int FileStat::getNumberOfChars() {
 		chars++;
 	}
 	return chars;
-}
-int FileStat::getNumberOfLines() {
-	int lines{ 0 };
-	for (char c : this->fileContent) {
-		if(c == '\n') lines++;
-	}
-	return lines;
 }
 
 void FileStat::PrintStats() {

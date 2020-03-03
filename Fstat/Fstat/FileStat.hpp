@@ -17,7 +17,6 @@ public:
 	~FileStat();
 	std::string ReadAllFile();
 	int getNumberOfChars();
-	int getNumberOfLines();
 	void PrintStats();
 };
 
