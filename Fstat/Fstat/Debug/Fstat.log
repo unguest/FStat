@@ -1,3 +1,0 @@
-﻿  FileStat.cpp
-D:\Data\Programmation\FStat\Fstat\Fstat\FileStat.cpp(13,88): warning C4302: 'cast de type' : troncation de 'const char *' à 'char'
-  Fstat.vcxproj -> D:\Data\Programmation\FStat\Fstat\Debug\Fstat.exe
